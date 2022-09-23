@@ -261,5 +261,4 @@ __pycache__/
 *.pyc
 
 # Minified content
-*site.min.css
-*site.min.js
+*.min.css
