@@ -5,4 +5,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.9" PrivateAssets="all"/>
   </ItemGroup>
 
+  <Target Name="tailwind build" BeforeTargets="Compile" Condition="'$(CI)' != 'true'">
+    <Exec Command="..\tw.exe -c wwwroot\tailwind.config.js -i wwwroot\tailwind.css -o wwwroot\tailwind.min.css --minify" ContinueOnError="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+    </Exec>
+    <Error Condition="'$(ErrorCode)' != '0'" Text="Error building CSS file" />
+  </Target>
+
 </Project>
