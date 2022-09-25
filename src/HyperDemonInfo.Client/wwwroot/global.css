@@ -3,6 +3,17 @@
 	--transition-time: 200ms;
 }
 
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
 .nav-item {
 	perspective: 1000px;
 	display: flex;
@@ -27,7 +38,8 @@
 	pointer-events: none;
 }
 
-.sub-nav, .sub-nav-item {
+.sub-nav,
+.sub-nav-item {
 	-webkit-transition: all var(--transition-time) ease-in-out;
 	transition: all var(--transition-time) ease-in-out;
 }
