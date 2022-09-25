@@ -1,1 +1,49 @@
-<a href="">HyperDemon.info</a>
+<header>
+	<div class="flex items-center h-20 max-w-screen-xl gap-8 py-4 mx-auto sm:px-4 lg:px-6">
+		<a class="block text-primary" href="http://hyprd.mn/">
+			<span class="sr-only">HyperDemon.info</span>
+			<img height="64" width="64" src="/images/bird.png" alt="Bird">
+		</a>
+
+		<div class="flex items-center justify-end flex-1 md:justify-between">
+			<nav class="hidden md:block" aria-labelledby="header-navigation">
+				<h2 class="sr-only" id="header-navigation">Header navigation</h2>
+
+				<ul class="flex items-center gap-6 text-sm">
+					<li class="nav-item">
+						<a class="@NavLink" href="#">
+							Leaderboard
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="@NavLink" href="#">
+							Mechanics
+						</a>
+						<ul class="sub-nav">
+							<li class="sub-nav-item"><a href="#">Movement</a></li>
+						</ul>
+					</li>
+
+					<li class="nav-item">
+						<a class="@NavLink" href="#">
+							Enemies
+						</a>
+						<ul class="sub-nav">
+							<li class="sub-nav-item"><a href="#">Snake</a></li>
+							<li class="sub-nav-item"><a href="#">Skull I</a></li>
+							<li class="sub-nav-item"><a href="#">Skull III</a></li>
+							<li class="sub-nav-item"><a href="#">Centipede</a></li>
+						</ul>
+					</li>
+
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+
+@code {
+	private const string NavLink = "text-primary text-lg hover:text-white p-2 rounded-sm";
+}

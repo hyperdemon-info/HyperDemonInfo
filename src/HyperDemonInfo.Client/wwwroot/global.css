@@ -1,0 +1,37 @@
+:root {
+	--delay-increment: 100ms;
+	--transition-time: 200ms;
+}
+
+.nav-item {
+	perspective: 1000px;
+	display: flex;
+	justify-content: center;
+}
+
+.nav-item:hover > .sub-nav {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: all;
+}
+
+.sub-nav {
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	top: 100%;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.sub-nav, .sub-nav-item {
+	-webkit-transition: all var(--transition-time) ease-in-out;
+	transition: all var(--transition-time) ease-in-out;
+}
+
+.sub-nav-item:hover {
+	color: white;
+}
